@@ -39,7 +39,6 @@ MDD-Framework-Public/
 ├── utils.py                # Hằng số, load_vocab, text_to_tensor, feature extractor, device
 ├── vocab.json              # Bộ từ vựng âm vị CTC (125 token)
 ├── requirements.txt        # Danh sách thư viện cần cài
-├── checkpoint/              # (sinh ra sau khi train) chứa checkpoint_wl.pth
 └── README.md
 ```
 

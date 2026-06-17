@@ -1,0 +1,45 @@
+# requirements.txt — MDD-Framework-Public
+# Tổng hợp đầy đủ từ các import thực tế trong main.py, trainer.py, model.py,
+# dataset.py, utils.py, evaluate.py, và các lệnh "!pip install" trong notebook gốc.
+# Yêu cầu Python >= 3.10.
+#
+# Lưu ý: torch nên được cài theo đúng phiên bản CUDA của máy/GPU đang dùng.
+# Nếu pip install torch ở dòng dưới không tự chọn đúng bản CUDA, cài thủ công theo
+# hướng dẫn tại https://pytorch.org/get-started/locally/ TRƯỚC khi cài các dòng còn lại.
+
+# ---------------------------------------------------------------------------
+# Deep learning / mô hình nền (model.py, trainer.py, utils.py)
+# ---------------------------------------------------------------------------
+torch>=2.1.0
+transformers>=4.33.0
+
+# ---------------------------------------------------------------------------
+# Xử lý audio (dataset.py, trainer.py)
+# ---------------------------------------------------------------------------
+librosa>=0.10.0
+soundfile>=0.12.1
+
+# ---------------------------------------------------------------------------
+# Xử lý dữ liệu (main.py, trainer.py, dataset.py)
+# ---------------------------------------------------------------------------
+pandas>=1.5.3
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# ---------------------------------------------------------------------------
+# Đánh giá / căn chỉnh chuỗi (trainer.py theo dõi WER, phân tích lỗi, evaluate.py)
+# ---------------------------------------------------------------------------
+jiwer>=3.0.0
+Levenshtein>=0.21.0
+
+# ---------------------------------------------------------------------------
+# Giải mã CTC có hỗ trợ mô hình ngôn ngữ (utils.py) — tuỳ chọn cho beam-search/KenLM
+# Cần công cụ build C++ (cmake, gcc/g++) trên hệ thống để cài kenlm từ PyPI.
+# ---------------------------------------------------------------------------
+pyctcdecode>=0.5.0
+kenlm>=0.2.0
+
+# ---------------------------------------------------------------------------
+# Tiện ích
+# ---------------------------------------------------------------------------
+tqdm>=4.65.0
